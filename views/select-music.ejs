@@ -1,0 +1,30 @@
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .music-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: #3e3e3e;
+  }
+
+  div a {
+    color: #fff;
+  }
+</style>
+
+<div class="container">
+  <% musics.forEach(music => { %>
+    <div class="music-container">
+      <a href="/stream-page/<%=music%>"><%=music%></a>
+    </div>
+  <% }); %>
+</div>
+
+<a href="/">upload file</a>
