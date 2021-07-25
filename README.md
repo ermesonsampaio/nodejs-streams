@@ -1,8 +1,8 @@
-# 😲 Streaming && Upload Files
+# Streaming && Upload Files
 
 An exercise simple involving streaming and uploading files.
 
-## 📝 Features
+## Features
 
 - [x] Upload any type of file.
 
@@ -12,7 +12,7 @@ An exercise simple involving streaming and uploading files.
 
 ```bash
 # Clone this repository
-git clone https://github.com/Ermeso/streaming.git
+git clone https://github.com/ermesonsampaio/streaming.git
 
 # Open the Repository on VSCode
 code streaming
