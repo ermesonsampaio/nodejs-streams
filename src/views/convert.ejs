@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Streams</title>
+
+  <!-- highlight.js -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <!-- Fira Code -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  /> 
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Fira Code';
+    }
+
+    body {
+      background-color: #282c34;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .wrapper {
+      overflow: auto;
+      height: 90vh;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+      width: 50vw;
+      margin: auto;
+    }
+
+    .button {
+      padding: 10px 0;
+      width: 100%;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: #ff7b00;
+      text-align: center;
+      color: #fff;
+      text-transform: capitalize;
+      border: none;
+      outline: none;
+      font-weight: normal;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    form {
+      display: flex;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <pre><code class="language-json"><%= json %></code></pre>
+  </div>
+
+  <div class="buttons-container">
+    <a class="button" href="/download/<%= fileName %>.json">download</a>
+    <a class="button" href="/delete/<%= fileName %>?redirectTo=/">home</a>
+  </div>
+</body>
+</html>
