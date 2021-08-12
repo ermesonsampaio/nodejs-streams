@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { join } from 'path';
-import { convert } from '../convert';
 import multer from 'multer';
 import fs from 'fs';
+import { convert } from '../convert';
 
 const router = Router();
 const upload = multer({ dest: join(__dirname, '..', 'data') });
@@ -18,12 +18,12 @@ router.get('/convert', async (req, res) => {
 
   const filePath = join(dataPath, String(fileName));
   const finalPath = join(dataPath, `${fileName}.json`);
-  
-  if(!fileName || !fs.existsSync(filePath)) return res.redirect('/');
+
+  if (!fileName || !fs.existsSync(filePath)) return res.redirect('/');
 
   const stream = await convert(filePath, finalPath);
 
-  res.render('convert', { json: stream.read(), fileName });
+  return res.render('convert', { json: stream.read(), fileName });
 });
 
 router.post('/upload', upload.single('file'), (req, res) => {
@@ -33,7 +33,9 @@ router.post('/upload', upload.single('file'), (req, res) => {
 router.get('/download/:fileName', (req, res) => {
   const { fileName } = req.params;
 
-  if(fileName) return res.download(join(dataPath, fileName), 'csvtojson.json');
+  return fileName
+    ? res.download(join(dataPath, fileName), 'csvtojson.json')
+    : res.redirect('/');
 });
 
 router.get('/delete/:fileName', (req, res) => {

@@ -32,7 +32,7 @@ export async function convert(csvFile: string, finalFile: string) {
   );
 
   const jsonFormatted = JSON.stringify(json, null, 2);
-  const finalJson =  Readable.from(jsonFormatted);
+  const finalJson = Readable.from(jsonFormatted);
 
   finalJson.pipe(createWriteStream(finalFile));
 
