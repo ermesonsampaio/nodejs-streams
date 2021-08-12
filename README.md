@@ -18,6 +18,7 @@ git clone https://github.com/ermesonsampaio/nodejs-streams.git
 cd nodejs-streams
 yarn
 ```
+
 <br/>
 
 > - Using npm.
@@ -26,6 +27,7 @@ yarn
 > cd nodejs-streams
 > npm install
 > ```
+>
 <br/>
 
 - Run project in development mode.
