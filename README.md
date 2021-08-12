@@ -4,7 +4,7 @@
 
 An exercise simple involving streaming and uploading files.
 
-## Instalation
+## Installation
 
 - First, clone this repository.
 
