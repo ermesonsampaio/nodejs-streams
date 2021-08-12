@@ -29,6 +29,7 @@
     "typescript": "^4.3.5"
   },
   "scripts": {
+    "predev": "rm -rf src/data/**/*",
     "dev": "tsnd --respawn --transpile-only src/server.ts",
     "start": "node .",
     "prebuild": "rm -rf dist",
